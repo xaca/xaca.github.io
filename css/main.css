@@ -52,13 +52,17 @@
         max-width: 682px;
       }
       #btn_registro{
-        display: inline-block;
+        display: block;
         text-decoration: none;
         color: #fffb7d;
         background: #582296;
         padding: 12px 60px;
-        width:90%;
+        width:50%;
         text-align: center;
+        margin:0 auto;
+        border: 1px solid;
+        padding: 10px;
+        box-shadow: 5px 5px  #f77311;
       }
       #btn_registro:hover{
         background: #fffb7d;
