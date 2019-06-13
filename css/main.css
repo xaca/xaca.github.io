@@ -12,6 +12,11 @@
         font-weight: 900;
         color: #f77311;
       }
+      .mensaje_importante{
+        font-weight: 500;
+        color:#582296;
+        text-decoration: underline;
+      }
       li {
         list-style-type: none;
         font-weight: 400;
