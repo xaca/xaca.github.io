@@ -51,6 +51,20 @@
         width: 100%;
         max-width: 682px;
       }
+      #btn_registro{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: #fffb7d;
+        background: #582296;
+        padding: 5px 60px;
+        width:500px;
+      }
+      #btn_registro:hover{
+        background: #fffb7d;
+        color: #582296;
+      }
       @media screen and (max-width: 720px) {
         li {
           height: auto;
