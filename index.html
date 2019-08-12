@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Retos Vive UPB</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <section>
@@ -46,13 +47,168 @@
                     Y la copiamos usando la etiqueta img en el html, como muestra el ejemplo:                    
                 </p>
                 <pre>
-                &#x3C;img src=&#x22;http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/128/22261-panda-face-icon.png&#x22; alt=&#x22; Mi mascota&#x22; id=&#x22;mascota&#x22;&#x3E;
+                    <code>
+&lt;div&gt;
+    &lt;img src=&quot;http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/128/22261-panda-face-icon.png&quot; alt=&quot; Mi mascota&quot; id=&quot;mascota&quot;&gt;
+&lt;/div&gt;
+                    </code>
                 </pre>
                 <p>En codepen, el resultado sería:</p>
-                <img src="https://i.imgur.com/q2VdrNJ.png" target="_blank" />
-
-                https://imgur.com/a/SYDpNC9
+                <img src="https://i.imgur.com/q2VdrNJ.png"  />                
             </li>
+            <li>
+                Agregamos un estilo gráfico en la sección CSS, pegamos lo siguiente:
+
+                <pre>
+                   <code>
+div{
+    border-radius:130px;
+    background:hotpink; 
+    padding:20px;
+    width:128px;
+    margin-left:auto;
+    margin-right:auto;
+}
+                   </code>
+                </pre>
+                <p>En codepen, el resultado sería:</p>
+                <img src="https://i.imgur.com/Wh86Axr.png" alt="">
+                <p>
+                    Puedes cambiar el color del background, cambiando hotpink, por algún nombre en inglés. Algunos ejemplos: grape, orange, yellow, red, blue, pink.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Agregamos código adicional en la sección html:
+                </p>
+                <pre>
+                    <code>
+&lt;p&gt;
+  &lt;label for=&quot;&quot;&gt;Nombre
+    &lt;span id=&quot;nombre&quot;&gt;&lt;/span&gt;    
+  &lt;/label&gt; &lt;br&gt;
+  &lt;label for=&quot;&quot;&gt;Peso
+    &lt;span id=&quot;peso&quot;&gt;&lt;/span&gt;    
+  &lt;/label&gt;
+&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>
+                    Y también nuevas reglas de estilos:
+                </p>
+                <pre>
+                    <code>
+p{
+    width:200px;
+    height:60px;
+    background:purple;
+    margin-left:auto;
+    margin-right:auto;
+    color:pink;
+    border-radius:5px;
+    padding:5px;
+    font-family:sans-serif;
+}                        
+                    </code>
+                </pre>
+                <p>En codepen se actualizará el resultado como se muestra a continuación:</p>
+                <img src="https://i.imgur.com/AE2ErvA.png" alt="">
+            </li>
+            <li>
+                <p>Agregamos un botón, primero modificamos el html:</p>
+                <pre>
+                    <code>
+&lt;p&gt;
+&lt;label for=&quot;&quot;&gt;Nombre
+    &lt;span id=&quot;nombre&quot;&gt;&lt;/span&gt;    
+&lt;/label&gt; &lt;br&gt;
+&lt;label for=&quot;&quot;&gt;Peso
+    &lt;span id=&quot;peso&quot;&gt;&lt;/span&gt;    
+&lt;/label&gt; &lt;br&gt; 
+&lt;input type=&quot;button&quot; id=&quot;actualizar&quot; value=&quot;Actualizar&quot; /&gt;
+&lt;/p&gt;
+                    </code>
+                </pre>
+                <p>Y agregamos un nuevo estilo:</p>
+                <pre>
+                    <code>
+#actualizar{
+    width:200px;
+    background:greenyellow;
+}
+                    </code>
+                </pre>
+                <p>El resultado en codepen sería:</p>
+                <img src="https://i.imgur.com/FiZybJ6.png">
+            </li>
+            <li>
+                <p>
+                    Probamos ahora que javascript funcione, agregamos el siguiente código en la sección JS.
+                </p>
+                <pre>
+                    <code>
+window.onload = init;
+
+function init()
+{
+    actualizar.addEventListener("click",cargarDatos);
+}
+
+function cargarDatos()
+{
+    alert("Hola Mundo");
+}
+                    </code>
+                </pre>
+                <p>
+                    Si presionamos el botón actualizar, debe aparecer una ventana, como vemos a continuación
+                </p>
+                <img src="https://i.imgur.com/TQwNfQh.png" alt="">
+            </li>
+            <li>
+                <p>Ahora vamos a automatizar el proceso que hemos hecho hasta el momento, modifica el siguiente código en la sección de javascript para que mires el resultado</p>
+                <pre>
+                    <code>
+function cargarDatos()
+{
+    let aleatorio = Math.round(Math.random()*(100-1)+parseInt(1));;
+    let url = "https://pokeapi.co/api/v2/pokemon/"+aleatorio;
+    fetch(url)
+    .then(function(response) {
+    return response.json();
+    })
+    .then(function(json) {
+    mascota.src = json.sprites.front_default;
+    nombre.innerHTML = json.name;
+    peso.innerHTML = json.weight;
+    });
+}
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Modificamos los estilos de la imagen del inicio, ya que las nuevas imagenes son mas pequeñas, cambiamos el tamaño del width a 96px</p>
+                <pre>
+                    <code>
+div{
+    border-radius:130px;
+    background:hotpink; 
+    padding:20px;
+    width:96px;
+    margin-left:auto;
+    margin-right:auto;
+}
+                    </code>
+                </pre>
+                <img src="https://i.imgur.com/sny3M6m.png" alt="">
+            </li> 
+            <li>
+                Personaliza tu proyecto, cambiando los colores y algunos textos, enseñale el resultado al profesor acompañante y reclama un espectacular regalo.
+            </li>
+            <li>
+                El resultado final se debe ver similar al siguiente ejemplo:
+                <a href="https://codepen.io/xaca/pen/XvxYBe" target="_blank">Reto completado</a>
+            </li>           
         </ol>
     </section>
 </body>
