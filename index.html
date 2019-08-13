@@ -5,62 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Retos Vive UPB</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,500,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
     <section>
-        <h1>Creación de una aplicación web</h1>
-        <p>En este tutorial, podrás seguir los pasos necesarios para crear el frontend de una aplicación, es decir la interfaz que 
-           usará el usuario para iteractuar con una plataforma. Luego conectarás el backend, es decir todo lo que sucede detrás de una
-           aplicación para que sea posible almacenar, consultar y realizar diferentes operaciones con los datos.
-        </p>
-        <h2>Comencemos</h2>
-        <ol>
-            <li>
-                Ingresar a <a href="https://codepen.io/pen/" target="_blank">codepen</a>, este es un editor en línea, esta herramienta nos permite crear la aplicación
-                y trabajar desde cualquier computador que tenga un navegador y una conexión a internet.
-            </li>
-            <li>
-                La interfaz gráfica de nuestra aplicación esta compuesta por 2 secciones: La estructura que se define por medio del html y
-                el look gráfico, el cual es un conjunto de reglas visuales que permiten personalizar las propiedades que definen el estilo
-                de la interfaz del usuario.
-            </li>
-            <li>
-                Hay una tercera sección, denominada javascript, se encarga de la interacción del usuario con la aplicación, por medio de programación.
-                Nos permitirá, agregar respuestas a las acciones del usuario, por ejemplo cuando presiona un botón.
-            </li>
-            <li>
+        <div>
+            <h1>Creación de una aplicación web</h1>
+            <p>En este tutorial, podrás seguir los pasos necesarios para crear el frontend de una aplicación, es decir la interfaz que 
+               usará el usuario para iteractuar con una plataforma. Luego conectarás el backend, es decir todo lo que sucede detrás de una
+               aplicación para que sea posible almacenar, consultar y realizar diferentes operaciones con los datos.
+            </p>
+        </div>
+            <div>
+            <h2>Comencemos</h2>
+                <p>
+                    Ingresar a <a href="https://codepen.io/pen/" target="_blank">codepen</a>, este es un editor en línea, esta herramienta nos permite crear la aplicación
+                    y trabajar desde cualquier computador que tenga un navegador y una conexión a internet.
+                </p>
+            </div>
+            <div>
+                <p>
+                    La interfaz gráfica de nuestra aplicación esta compuesta por 2 secciones: La estructura que se define por medio del HTML y
+                    el look gráfico CSS, el cual es un conjunto de reglas visuales que permiten personalizar las propiedades que definen el estilo
+                    de la interfaz del usuario.
+                </p>
+            </div>
+            <div>
+                <p>
+                    Hay una tercera sección, denominada JS (javascript), se encarga de la interacción del usuario con la aplicación, por medio de programación.
+                    Nos permitirá, agregar respuestas a las acciones del usuario, por ejemplo cuando presiona un botón.
+                </p>
+            </div>
+            <div>
                 <p>
                 Ahora, vamos a buscar algunos recursos para crear la estructura de nuestra aplicación, entrar a <a href="http://www.iconarchive.com" target="_blank">iconarchive</a> y buscar
-                el nombre de su animal favorito y seleccionar una imagen. 
+                el nombre de su animal favorito en inglés (Ej: frog<img class="emoji" src="img/emojis/Emoji Natur-07.png"/>,tiger<img class="emoji" src="img/emojis/Emoji Natur-08.png"/>,koala<img class="emoji" src="img/emojis/Emoji Natur-09.png"/>,Pig<img class="emoji" src="img/emojis/Emoji Natur-11.png"/>,Monkey<img class="emoji" src="img/emojis/Emoji Natur-15.png"/>...) y seleccionar una imagen. 
                 </p>
-                <img src="https://i.imgur.com/meIeet4.png" alt="Seleccion del panda :)">
+                <img class="imagen_grande" src="https://i.imgur.com/meIeet4.png" alt="Selección del panda :)">
                 <p>
                     Abrimos la imagen que más nos guste, haciendo click en el enlace con el tamaño 128x128
                 </p>
-                <img src="https://i.imgur.com/eon0lEv.png" alt="Abrimos la imagen que más nos guste"> 
+                <img class="imagen_grande" src="https://i.imgur.com/eon0lEv.png" alt="Abrimos la imagen que más nos guste"> 
                 <p>
                    Copiamos la dirección de la imagen en internet, como muestra vemos a continuación    
                 </p>
-                <img src="https://i.imgur.com/0NTnpMf.png" alt="Copiamos la url de la imagen">
+                <img class="imagen_grande" src="https://i.imgur.com/0NTnpMf.png" alt="Copiamos la url de la imagen">
                 <p>
                     Y la copiamos usando la etiqueta img en el html, como muestra el ejemplo:                    
                 </p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_01" cols="130" rows="4" wrap="off">
 &lt;div&gt;
-    &lt;img src=&quot;http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/128/22261-panda-face-icon.png&quot; alt=&quot; Mi mascota&quot; id=&quot;mascota&quot;&gt;
+&lt;img src=&quot;http://icons.iconarchive.com/icons/google/noto-emoji-animals-nature/128/22261-panda-face-icon.png&quot; alt=&quot; Mi mascota&quot; id=&quot;mascota&quot;&gt;
 &lt;/div&gt;
-                    </code>
-                </pre>
+                </textarea>
+                <br><button onclick="copiar('#paso_01')" class="copiar">Copiar</button>
+            </div>
                 <p>En codepen, el resultado sería:</p>
                 <img src="https://i.imgur.com/q2VdrNJ.png"  />                
-            </li>
-            <li>
-                Agregamos un estilo gráfico en la sección CSS, pegamos lo siguiente:
-
-                <pre>
-                   <code>
+            </div>
+            <div>
+                <p>
+                    Agregamos un estilo gráfico en la sección CSS, pegamos lo siguiente:
+                </p>
+                <div class="codigo">
+                <textarea name="" id="paso_02" cols="130" rows="7" wrap="off">
 div{
     border-radius:130px;
     background:hotpink; 
@@ -69,20 +80,22 @@ div{
     margin-left:auto;
     margin-right:auto;
 }
-                   </code>
-                </pre>
+</textarea>
+<br><button onclick="copiar('#paso_02')" class="copiar">Copiar</button>
+</div>
                 <p>En codepen, el resultado sería:</p>
                 <img src="https://i.imgur.com/Wh86Axr.png" alt="">
                 <p>
-                    Puedes cambiar el color del background, cambiando hotpink, por algún nombre en inglés. Algunos ejemplos: grape, orange, yellow, red, blue, pink.
+                    Puedes cambiar el color del fondo, cambiando hotpink, por algún nombre en inglés. Algunos ejemplos: grape, orange, yellow, red, blue, pink. 
+                    Consulta una lista completa <a href="https://www.cdmon.com/es/tabla-colores" target="_blank">aquí</a> 
                 </p>
-            </li>
-            <li>
+            </div>
+            <div>
                 <p>
                     Agregamos código adicional en la sección html:
                 </p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_03" cols="130" rows="8" wrap="off">
 &lt;p&gt;
   &lt;label for=&quot;&quot;&gt;Nombre
     &lt;span id=&quot;nombre&quot;&gt;&lt;/span&gt;    
@@ -91,13 +104,14 @@ div{
     &lt;span id=&quot;peso&quot;&gt;&lt;/span&gt;    
   &lt;/label&gt;
 &lt;/p&gt;
-                    </code>
-                </pre>
+                </textarea>
+                <br><button onclick="copiar('#paso_03')" class="copiar">Copiar</button>
+            </div>
                 <p>
-                    Y también nuevas reglas de estilos:
+                    Y también nuevas reglas de estilos CSS:
                 </p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_04" cols="130" rows="11" wrap="off">
 p{
     width:200px;
     height:60px;
@@ -109,15 +123,16 @@ p{
     padding:5px;
     font-family:sans-serif;
 }                        
-                    </code>
-                </pre>
+</textarea>
+<br><button onclick="copiar('#paso_04')" class="copiar">Copiar</button>
+</div>
                 <p>En codepen se actualizará el resultado como se muestra a continuación:</p>
-                <img src="https://i.imgur.com/AE2ErvA.png" alt="">
-            </li>
-            <li>
+                <img class="imagen_grande" src="https://i.imgur.com/AE2ErvA.png" alt="">
+            </div>
+            <div>
                 <p>Agregamos un botón, primero modificamos el html:</p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_05" cols="130" rows="8" wrap="off">
 &lt;p&gt;
 &lt;label for=&quot;&quot;&gt;Nombre
     &lt;span id=&quot;nombre&quot;&gt;&lt;/span&gt;    
@@ -127,26 +142,28 @@ p{
 &lt;/label&gt; &lt;br&gt; 
 &lt;input type=&quot;button&quot; id=&quot;actualizar&quot; value=&quot;Actualizar&quot; /&gt;
 &lt;/p&gt;
-                    </code>
-                </pre>
+                    </textarea>
+                <br><button onclick="copiar('#paso_05')" class="copiar">Copiar</button>
+                </div>
                 <p>Y agregamos un nuevo estilo:</p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_06" cols="130" rows="4" wrap="off">
 #actualizar{
     width:200px;
     background:greenyellow;
 }
-                    </code>
-                </pre>
+                    </textarea>
+                <br><button onclick="copiar('#paso_06')" class="copiar">Copiar</button>
+                </div>
                 <p>El resultado en codepen sería:</p>
-                <img src="https://i.imgur.com/FiZybJ6.png">
-            </li>
-            <li>
+                <img class="imagen_grande" src="https://i.imgur.com/FiZybJ6.png">
+            </div>
+            <div>
                 <p>
                     Probamos ahora que javascript funcione, agregamos el siguiente código en la sección JS.
                 </p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_07" cols="130" rows="11" wrap="off">
 window.onload = init;
 
 function init()
@@ -158,17 +175,18 @@ function cargarDatos()
 {
     alert("Hola Mundo");
 }
-                    </code>
-                </pre>
+                    </textarea>
+                <br><button onclick="copiar('#paso_07')" class="copiar">Copiar</button>
+                </div>
                 <p>
                     Si presionamos el botón actualizar, debe aparecer una ventana, como vemos a continuación
                 </p>
-                <img src="https://i.imgur.com/TQwNfQh.png" alt="">
-            </li>
-            <li>
+                <img class="imagen_grande" src="https://i.imgur.com/TQwNfQh.png" alt="">
+            </div>
+            <div>
                 <p>Ahora vamos a automatizar el proceso que hemos hecho hasta el momento, modifica el siguiente código en la sección de javascript para que mires el resultado</p>
-                <pre>
-                    <code>
+                <div class="codigo">
+                <textarea name="" id="paso_08" cols="130" rows="14" wrap="off">
 function cargarDatos()
 {
     let aleatorio = Math.round(Math.random()*(100-1)+parseInt(1));;
@@ -183,33 +201,39 @@ function cargarDatos()
     peso.innerHTML = json.weight;
     });
 }
-                    </code>
-                </pre>
-            </li>
-            <li>
+                    </textarea>
+                <br><button onclick="copiar('#paso_08')" class="copiar">Copiar</button>
+                </div>
+            </div>
+            <div>
                 <p>Modificamos los estilos de la imagen del inicio, ya que las nuevas imagenes son mas pequeñas, cambiamos el tamaño del width a 96px</p>
-                <pre>
-                    <code>
-div{
-    border-radius:130px;
-    background:hotpink; 
-    padding:20px;
-    width:96px;
-    margin-left:auto;
-    margin-right:auto;
-}
-                    </code>
-                </pre>
-                <img src="https://i.imgur.com/sny3M6m.png" alt="">
-            </li> 
-            <li>
-                Personaliza tu proyecto, cambiando los colores y algunos textos, enseñale el resultado al profesor acompañante y reclama un espectacular regalo.
-            </li>
-            <li>
-                El resultado final se debe ver similar al siguiente ejemplo:
-                <a href="https://codepen.io/xaca/pen/XvxYBe" target="_blank">Reto completado</a>
-            </li>           
-        </ol>
+                <div class="codigo">
+                    <textarea name="" id="paso_09" cols="130" rows="8" wrap="off">
+    div{
+        border-radius:130px;
+        background:hotpink; 
+        padding:20px;
+        width:96px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+                        </textarea>
+                    <br><button onclick="copiar('#paso_09')" class="copiar">Copiar</button>
+                    <br>
+                </div>
+                <img class="imagen_grande" src="https://i.imgur.com/sny3M6m.png" alt="">
+            </div> 
+            <div>
+                <p>
+                    Personaliza tu proyecto, cambiando los colores y algunos textos, enseñale el resultado al profesor acompañante y quedarás inscrito para la entrevista.
+                </p>
+            </div>
+            <div>
+                <p>
+                    El resultado final se debe ver similar al siguiente ejemplo:
+                    <a href="https://codepen.io/xaca/pen/XvxYBe" target="_blank">Reto completado</a>
+                </p>
+            </div>           
     </section>
 </body>
 </html>
