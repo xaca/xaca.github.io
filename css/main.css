@@ -48,6 +48,14 @@
       p,.codigo{
         text-align: left;
       }
+      @media screen and (max-width: 720px) {
+        h1{
+          font-size: 30px;
+        }
+        h2{
+          font-size: 15px;
+        }
+      }
       /* body {
         margin: 0;
         padding: 20px;
