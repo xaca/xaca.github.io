@@ -57,6 +57,22 @@
         }
         
       }
+
+      #pensum{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 106px solid transparent;
+        border-top: 100px solid #e31e70;
+      }
+      #pensum span{
+        transform: rotate(-44.3deg) translateX(48px) translateY(-27px);
+        display: block;
+        color: #fff7a1;
+      }
       /* body {
         margin: 0;
         padding: 20px;

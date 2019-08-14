@@ -5,11 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Reto Vive UPB - Baile y programación</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:400,500,700,800,900&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body{
+            background: #8bd2ed;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            color:rgb(56, 73, 165);
+        }
+        header{
+            background: #e31e70;
+            border-radius: 20px;
+            height: 100px;
+            margin-top: 50px;
+            line-height: 100px;
+            color: #fff7a1;
+        }
+        h1{
+            font-family: 'Lobster', cursive;
+            font-size: 50px;
+        }
+        header, section{
+            position: relative;
+            width: 500px;
+            margin: 0 auto;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        #gato{
+            position: absolute;
+            top: -52px;
+            right: -79px;
+        }
+        section div{
+            position: absolute;
+            background: #fff7a1;
+            color:#e31e70;
+            border-radius:100px;
+            width:200px;
+            height: 200px;
+            bottom:10px;
+            right: 20px;
+        }
+        #empezar_reto{
+            position: absolute;
+            bottom: 70px;
+            right: -90px;
+            cursor: pointer;
+        }
+        #bailarin{
+            width: 100%;
+            max-width: 419px;
+        }
+        
+        @media screen and (max-width: 720px) {
+
+            h1{
+                font-size: 30px;
+            }
+            h2{
+                font-size: 20px;
+            } 
+            #gato{
+                width: 150px; 
+                top: -22px;
+                right: -26px;
+            }       
+      }
+      #pensum{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 106px solid transparent;
+        border-top: 100px solid #e31e70;
+      }
+      #pensum span{
+        transform: rotate(-44.3deg) translateX(48px) translateY(-27px);
+        display: block;
+        color: #fff7a1;
+      }
+      
+    </style>
 </head>
 <body>
-        <h1>Fiesta para bailar</h1>
-        <p>
-            ¡Crea el código de un baile para compartirlo con tus amigos! 
-        </p>
+    <a href="https://www.upb.edu.co/es/pregrados/ingenieria-sistemas-medellin" target="_blank">
+        <div id="pensum">
+            <span>Pensum</span>
+        </div>
+    </a>
+        <header>
+            <img id="gato" src="https://studio.code.org/blockly/media/skins/dance/win_avatar.png" alt="">
+            <h1> Fiesta para bailar</h1>
+        </header>
+        <section>
+            <p>
+                ¡Crea el código de un baile para compartirlo con tus amigos! 
+            </p>
+            <a href="http://www.code.org/dance" target="_blank">
+                <img id="empezar_reto" src="img/empezar_reto.png" alt="">
+                <img id="bailarin" src="img/dance.gif" alt="">
+            </a>
+        </section>
 </body>
 </html>
