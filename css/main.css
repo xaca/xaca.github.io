@@ -78,86 +78,61 @@
         display: block;
         color: #fff7a1;
       }
-      /* body {
-        margin: 0;
-        padding: 20px;
-        font-family: 'Montserrat', sans-serif;
-        color: #151521;
-      }
-      ul {
-        padding: 0;
-      }
-      h1 {
-        font-weight: 900;
-        color: #f77311;
-      }
-      .mensaje_importante{
+     body{
+        background: #8bd2ed;
+        font-family: 'Raleway', sans-serif;
         font-weight: 500;
-        color:#582296;
-        text-decoration: underline;
-      }
-      li {
-        list-style-type: none;
-        font-weight: 400;
-        height: 60px;
-        line-height: 50px;
-        padding-left: 10px;
-      }
-      li:nth-child(even) {
-        background: #582296;
-        color: #fffb7d;
-      }
-      li:nth-child(odd) {
-        color: #582296;
-        background: #fffb7d;
-      }
-      li span {
-        font-size: 18px;
-        font-weight: 500;
-      }
-      .speaker {
-        font-weight: normal;
-      }
-      a {
-        color: #f77311;
-      }
-      div {
-        width: 100%;
+        color:rgb(56, 73, 165);
+        text-align: center;
+        font-size: 24px;
+        padding-top: 5vh;
+    }
+    h1{
+        font-family: 'Lobster', cursive;
+        color:#020659;
+        font-size: 60px;
         text-align: center;
       }
-
-      div > img {
-        width: 100%;
-        max-width: 682px;
+      #pensum{
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 106px solid transparent;
+        border-top: 100px solid #e31e70;
+        z-index: 1;
       }
-      #btn_registro{
+      #pensum span{
+        transform: rotate(-44.3deg) translateX(48px) translateY(-27px);
         display: block;
-        text-decoration: none;
-        color: #fffb7d;
-        background: #582296;
-        padding: 12px 60px;
-        width:50%;
-        text-align: center;
-        margin:0 auto;
-        border: 1px solid;
-        padding: 10px;
-        box-shadow: 5px 5px  #f77311;
+        color: #fff7a1;
+        font-size: 18px;
       }
-      #btn_registro:hover{
-        background: #fffb7d;
-        color: #582296;
+      a{
+          text-decoration: none;
       }
-      @media screen and (max-width: 720px) {
-        li {
-          height: auto;
-          padding: 2px 10px;
-          line-height: 30px;
+      #youtube{
+        width: 100%;
+        height: 7vh;
+        line-height: 7vh;
+        background-color: #fff7a1;
+        position: fixed;
+        top:0px;
+        left: 0px;
+        color:#020659;
+        font-size: 3vh;
+      }
+      @media only screen and (min-width: 320px) and (max-width: 480px){
+            #youtube{
+                    font-size: 12px;
+                    padding-left: 30px;
+            }
+      }
+      @media only screen and (min-width: 480px) and (max-width: 1024px){  
+                #youtube{
+                    font-size: 16px;
+                    height: 60px;
+                }
         }
-        li > span {
-          display: block;
-        }
-        .speaker {
-          font-weight: 500;
-          display: block;
-        }
-      } */
